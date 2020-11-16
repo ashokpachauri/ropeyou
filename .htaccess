@@ -1,0 +1,21 @@
+RewriteEngine On 
+RewriteCond %{SERVER_PORT} 80
+RewriteCond %{HTTP_HOST} ^(www\.)?ropeyou\.com
+RewriteRule ^(.*)$ https://ropeyou.com/$1 [R,L]
+
+ErrorDocument 404 /404.php
+RewriteRule ^ru/(.*)$ profile.php?__username=$1 [L,NC]
+RewriteRule ^@rub-(.*)$ blog-detail.php?blog_tag=$1 [L,NC]
+RewriteRule ^job/(.*)$ job.php?job_tag=$1 [L,NC]
+RewriteRule ^blogger/@(.*)$ blogger.php?__username=$1 [L,NC]
+RewriteRule ^w/(.*)$ web-pages/index.php?__username=$1 [L,NC]
+RewriteRule ^u/(.*)/(.*)$ user-pages.php?__username=$1&__module=$2 [L,NC]
+RewriteRule ^u/(.*)$ user-pages.php?__username=$1 [L,NC]
+RewriteRule ^ru-comp/(.*)$ company.php?__comp_tag=$1 [L,NC]
+RewriteRule ^usr/(.*)$ user-profile-without-ads.php?__username=$1 [L,NC]
+RewriteRule ^resume/(.*)$ web-pages/resume.php?__username=$1 [L,NC]
+
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^([^\.]+)$ $1 [NC,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]

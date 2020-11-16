@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Audio test</title>
+    <script>
+      /**
+        * Plays a sound using the HTML5 audio tag. Provide mp3 and ogg files for best browser support.
+        * @param {string} filename The name of the file. Omit the ending!
+        */
+      function playSound(filename="sounds/bing"){
+        var mp3Source = '<source src="' + filename + '.mp3" type="audio/mpeg">';
+        var oggSource = '<source src="' + filename + '.ogg" type="audio/ogg">';
+        var embedSource = '<embed hidden="true" autostart="true" loop="false" src="' + filename +'.mp3">';
+        document.getElementById("sound").innerHTML='<audio autoplay="autoplay">' + mp3Source + oggSource + embedSource + '</audio>';
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- Will try to play bing.mp3 or bing.ogg (depends on browser compatibility) -->
+    <button id="notificator" onclick="playSound('sounds/bing');">Play</button>  
+    <div id="sound"></div>
+  </body>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script>
+	//setTimeout(function() { var src = 'https://ropeyou.com/template/sounds/bing.mp3';var audio = new Audio(src);audio.play() },5000);
+	$(document).ready(function(){
+		$("#notificator").click();
+	});
+  </script>
+</html>

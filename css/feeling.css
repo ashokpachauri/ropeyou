@@ -1,0 +1,292 @@
+.ru-reaction-box{
+  max-width:100%;
+  position: absolute;
+  
+}
+/*
+  margin:10px auto;
+  padding:0 60px;*/
+.like-btn {
+  font-weight: bold;
+  color: #7f7f7f;
+  position: relative;
+  cursor: pointer;
+  padding: 20px 2px 0 0;
+}
+
+.like-btn:hover {
+  text-decoration: underline;
+}
+
+.like-btn-default {
+  background-image: url('../images/like.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.like-btn-emo {
+  display: inline-block;
+  margin: 0 6px -3px 0;
+  width: 12px;
+  height: 12px;
+}
+
+.feelings-box {
+  height: 45px;
+  width: 340px;
+  padding: 5px;
+  position: absolute;
+  background: #ffffff;
+  top: -31px;
+  left: -14px;
+  box-shadow: 1px 1px 2px #cccccc, -1px 0px 2px #eeeeee;
+  border-radius: 44px 44px;
+  display: none;
+  background-color: #ffffff;
+}
+
+.feeling {
+  list-style-type: none;
+  cursor: pointer;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 8px;
+  opacity: 0;
+  transform: scale(1, 1);
+  transition: opacity .5s ease-in-out 1s, transform .07s ease-in-out 0s, top .07s ease-in-out 0s;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center
+}
+
+.like-btn:hover .feelings-box {
+  display: block;
+}
+
+.feeling-like {
+  left: 10px;
+  transition-delay: 0s;
+  background-image: url('../images/like.png');
+}
+
+.feeling-superlike {
+  left: 68px;
+  transition-delay: .05s;
+  background-image: url('../images/superlike.png');
+}
+
+.feeling-thoughtful {
+  left: 126px;
+  transition-delay: .1s;
+  background-image: url('../images/thoughtful.png');
+}
+
+.feeling-loved-it {
+  left: 184px;
+  transition-delay: .15s;
+  background-image: url('../images/loved-it.png');
+}
+
+.feeling-describe-plz {
+  left: 242px;
+  transition-delay: .2s;
+  background-image: url('../images/need-lighten.png');
+}
+
+.feeling-bang-on {
+  left: 300px;
+  transition-delay: .25s;
+  background-image: url('../images/objected.png');
+}
+.feeling-boring {
+  left: 358px;
+  transition-delay: .3s;
+  background-image: url('../images/boring.png');
+}
+
+
+.like-btn:hover .feeling {
+  opacity: 1;
+  animation-name: feeling_delay;
+  animation-duration: .5s;
+}
+
+@keyframes feeling_delay {
+  0% {
+    width: 30px;
+    height: 30px;
+    top: 60px;
+  }
+  48% {
+    width: 48px;
+    height: 48px;
+    top: 5px;
+  }	
+  100% {
+    width: 30px;
+    height: 30px;
+    top: 8px;
+  }
+}
+
+
+.like-btn:hover .feeling-like {
+  animation-delay: 0s
+}
+
+.like-btn:hover .feeling-superlike {
+  animation-delay: .05s
+}
+
+.like-btn:hover .feeling-thoughtful {
+  animation-delay: .1s
+}
+
+.like-btn:hover .feeling-loved-it {
+  animation-delay: .15s
+}
+
+.like-btn:hover .feeling-describe-plz {
+  animation-delay: .2s
+}
+
+.like-btn:hover .feeling-bang-on {
+  animation-delay: .25s
+}
+.like-btn:hover .feeling-boring {
+  animation-delay: .3s
+}
+
+.feeling:hover {
+  transform: scale(1.3, 1.3);
+  top: 2px
+}
+
+
+
+.feeling::before {
+  display: inline-block;
+  color: #ffffff;
+  text-align: center;
+  line-height: 17px;
+  font-size: .7em;
+  width: 70px;
+  height: 17px;
+  margin-left: 1%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  position: absolute;
+  top: -25px;
+  opacity: 0;
+  transition: opacity .2s ease-in-out 0s;
+}
+
+.feeling:hover::before {
+  opacity: 1
+}
+
+.feeling-like::before {
+  content: 'Like'
+}
+
+.feeling-superlike::before {
+  content: 'SupeLike'
+}
+
+.feeling-thoughtful::before {
+  content: 'Thoughtful'
+}
+
+.feeling-loved-it::before {
+  content: 'Loved It'
+}
+
+
+.feeling-describe-plz::before {
+  content: 'Describe Plz'
+}
+
+.feeling-bang-on::before {
+  content: 'Bang On'
+}
+.feeling-boring::before {
+  content: 'Boring'
+}
+
+.like-stat {
+  margin-top: 10px;
+}
+
+/*
+  margin-left:60px;*/
+.like-btn-like{
+  background-image: url('../images/like.png') !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.like-btn-superlike{
+  background-image: url('../images/superlike.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.like-btn-thoughtful{
+  background-image: url('../images/thoughtful.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.like-btn-loved-it{
+  background-image: url('../images/loved-it.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.like-btn-describe-plz{
+  background-image: url('../images/need-lighten.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.like-btn-bang-on{
+  background-image: url('../images/objected.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.like-btn-boring{
+  background-image: url('../images/boring.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.like-btn-text-like {
+  color:rgb(88, 144, 255);
+}
+.like-btn-text-loved-it,.like-btn-text-thoughtful,.like-btn-text-describe-plz,.like-btn-text-boring {
+  color:rgb(240, 186, 21)
+}
+.like-btn-text-superlike{
+  color:rgb(242, 82, 104)
+}
+.like-btn-text-bang-on{
+  color:rgb(247, 113, 75);
+}
+
+.like-emo > span{
+    display: inline-block;
+    margin: 0 -3px -3px 5px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #EEE;
+    border-radius: 50%;
+
+}
+
+.like-details{
+  margin-left:10px;
+  color:#9197a3;
+  font-size:12px;
+}
